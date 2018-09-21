@@ -3,12 +3,10 @@ import os
 migrations = 'Migrations'
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-
 def files_list():
     migrations_dir = os.path.join(current_dir, migrations)
     all_files_list = os.listdir(path=migrations_dir)
     return all_files_list
-
 
 def sql_files_list(files_list):
     sql_list = list()
@@ -16,7 +14,6 @@ def sql_files_list(files_list):
         if '.sql' in file:
             sql_list.append(file)
     return sql_list
-
 
 def read_file(file_name):
     file_path = os.path.join(current_dir, migrations, file_name)
@@ -40,7 +37,6 @@ def search_in_file(sql_files_list):
 
 def core():
     search_in_file(sql_files_list(files_list()))
-
 
 if __name__ == '__main__':
     core()
