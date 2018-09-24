@@ -35,9 +35,7 @@ def search_in_file(sql_files_list):
         print('Всего найдено файлов: {}'.format(len(searched_files)))
         files_list = searched_files
 
-def core():
-    search_in_file(sql_files_list(files_list()))
-
+        
 if __name__ == '__main__':
-    core()
+    search_in_file(sql_files_list(files_list()))
     pass
